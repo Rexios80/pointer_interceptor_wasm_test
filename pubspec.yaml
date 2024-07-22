@@ -1,28 +1,29 @@
 name: pointer_interceptor_wasm_test
-description: "A new Flutter project."
 publish_to: none
-
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.6.0-55.0.dev
+  sdk: ^3.0.0
 
 dependencies:
   flutter:
     sdk: flutter
-
-
+  pointer_interceptor: ^0.10.1+1
+  google_maps_flutter: ^2.7.0
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   rexios_lints: ^7.0.0
 
-
+dependency_overrides:
+  google_maps_flutter_web:
+    git:
+      url: https://github.com/Rexios80/packages_flutter
+      ref: e763d9d1308831f4f67e03a5ce621c6b19c8aebd
+      path: packages/google_maps_flutter/google_maps_flutter_web
+  google_maps:
+    git:
+      url: https://github.com/a14n/dart-google-maps
+      ref: 0f57b7d99ed9652a31cd60a5dd4f3c6cb6b9f31a
 
 flutter:
-
   uses-material-design: true
-
-
-
